@@ -1,0 +1,145 @@
+/* Gallery Layout */
+.listings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.listing-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.listing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.listing-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.listing-card:hover .listing-image {
+    transform: scale(1.05);
+}
+
+.listing-details {
+    padding: 1.5rem;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(255,255,255,1));
+}
+
+.listing-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.listing-price {
+    color: #ff6b6b;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.listing-description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Gallery Modal */
+.gallery-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 2000;
+    padding: 20px;
+}
+
+.gallery-modal img {
+    max-width: 90%;
+    max-height: 90vh;
+    margin: auto;
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.gallery-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2001;
+}
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 20px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.gallery-nav:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+.gallery-prev {
+    left: 20px;
+}
+
+.gallery-next {
+    right: 20px;
+}
+
+/* Session timeout warning */
+.timeout-warning {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff6b6b;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIQYLIZ AUTOS AND REAL ESTATE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">NIQYLIZ AUTOS AND REAL ESTATE</div>
+        <ul>
+            <li><a href="#featured-properties">Properties</a></li>
+            <li><a href="#featured-vehicles">Vehicles</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button id="adminBtn" class="admin-btn">Admin Login</button></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="search-container">
+            <h1>Find Your Dream Property or Vehicle</h1>
+            <div class="search-box">
+                <input type="text" placeholder="Search properties or vehicles...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <section id="featured-properties">
+        <h2>Featured Properties</h2>
+        <div class="listings-grid" id="properties-grid">
+            <!-- Properties will be loaded here dynamically -->
+        </div>
+    </section>
+
+    <section id="featured-vehicles">
+        <h2>Featured Vehicles</h2>
+        <div class="listings-grid" id="vehicles-grid">
+            <!-- Vehicles will be loaded here dynamically -->
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <p>We are your trusted partner in finding the perfect property or vehicle. With years of experience in both real estate and automotive markets, we provide top-quality listings and exceptional service.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> +254782151713</p>
+            <p><i class="fas fa-envelope"></i> info@propertyautohub.com</p>
+        </div>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <div id="admin-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Admin Login</h2>
+            <form id="admin-login-form">
+                <input type="password" id="admin-password" placeholder="Enter Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 NIQYLIZ AUTOS AND REAL ESTATE. All rights reserved.</p>
+    </footer>
+
+    <script src="gallery.js"></script>
+    <script src="imageViewer.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
